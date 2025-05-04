@@ -33,6 +33,10 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Credit Khaata!");
+});
+
 // 1. User Auth
 app.post("/auth/register", async (req, res) => {
   const { email, password } = req.body;
